@@ -22,123 +22,7 @@ body {
 }
 
 /* ===== SIDEBAR ===== */
-.sidebar {
-  width: 260px;
-  background: #202123;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
 
-.sidebar h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.new-chat {
-  background: #343541;
-  padding: 10px;
-  border-radius: 6px;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid #444;
-  transition: 0.2s;
-}
-
-.new-chat:hover {
-  background: #40414f;
-}
-
-/* ===== MAIN CHAT AREA ===== */
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.chat-container {
-  flex: 1;
-  overflow-y: auto;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* ===== MESSAGE ROW ===== */
-.message-row {
-  display: flex;
-  width: 100%;
-}
-
-.message {
-  max-width: 700px;
-  padding: 14px 18px;
-  border-radius: 8px;
-  line-height: 1.6;
-  white-space: pre-wrap;
-}
-
-.user {
-  background: #40414f;
-  margin-left: auto;
-}
-
-.bot {
-  background: #444654;
-  margin-right: auto;
-}
-
-/* ===== INPUT AREA ===== */
-.input-area {
-  padding: 20px;
-  background: #343541;
-  border-top: 1px solid #444;
-  display: flex;
-  justify-content: center;
-}
-
-.input-box {
-  width: 100%;
-  max-width: 800px;
-  background: #40414f;
-  border-radius: 8px;
-  display: flex;
-  padding: 10px;
-}
-
-.input-box textarea {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  resize: none;
-  color: white;
-  font-size: 15px;
-}
-
-.input-box button {
-  background: #19c37d;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.input-box button:hover {
-  background: #16a46a;
-}
-
-/* Scrollbar */
-.chat-container::-webkit-scrollbar {
-  width: 6px;
-}
-.chat-container::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 10px;
-}
 </style>
 </head>
 
@@ -161,18 +45,7 @@ body {
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 createChat({
 	webhookUrl: 'https://agent909.app.n8n.cloud/webhook/83740d52-2a39-4322-9e79-6234b5b6a3a5/chat',
-	webhookConfig: {
-		method: 'POST',
-		headers: {}
-	},
-	target: '#n8n-chat',
-	mode: 'window',
-	chatInputKey: 'chatInput',
-	chatSessionKey: 'sessionId',
-	loadPreviousSession: true,
-	metadata: {},
-	showWelcomeScreen: false,
-	defaultLanguage: 'en',
+
 	initialMessages: [
 		'Hi there! 👋',
 		'My name is chatgpt. How can I assist you today?'
@@ -186,7 +59,7 @@ createChat({
 			inputPlaceholder: 'Type your question..',
 		},
 	},
-	enableStreaming: false,
+	
 });
 	
 </script>
