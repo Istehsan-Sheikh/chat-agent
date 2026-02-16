@@ -226,6 +226,14 @@ function clearChat() {
   chatContainer.innerHTML = "";
 }
 </script>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://agent909.app.n8n.cloud/webhook/83740d52-2a39-4322-9e79-6234b5b6a3a5/chat'
+	});
+</script>
 
 </body>
 </html>
